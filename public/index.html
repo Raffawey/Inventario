@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Carrito de Compras</h1>
+        <form id="product-form">
+            <input type="text" id="product-name" placeholder="Producto" required>
+            <input type="number" id="product-price" placeholder="Precio" required>
+            <input type="number" id="product-quantity" placeholder="Cantidad" required>
+            <button type="submit">Agregar Producto</button>
+        </form>
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="totals">
+            <p>IVA (16%): $<span id="iva-total">0.00</span></p>
+            <p>Total: $<span id="grand-total">0.00</span></p>
+        </div>
+        <button id="generate-csv">Generar CSV</button>
+    </div>
+    
+    
+    <script src="script.js"></script>
+<script src="api.js"></script>
+
+
+</body>
+</html>

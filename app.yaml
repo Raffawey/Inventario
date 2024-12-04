@@ -1,0 +1,17 @@
+runtime: nodejs18  # Usar la versión de Node.js 18
+
+instance_class: F2  # Tipo de instancia F2, que ofrece 1 vCPU y 1.7 GB de RAM
+
+env: standard  # Entorno estándar para Google Cloud
+
+handlers:
+  - url: /
+    static_dir: public  # Directorio para archivos estáticos como HTML, CSS, JS, etc.
+  - url: /.*
+    script: auto  # Usar el script de auto-configuración de Google App Engine
+
+# Configuración de recursos
+resources:
+  cpu: 1  # Asigna 1 CPU
+  memory_gb: 1  # Asigna 1 GB de memoria
+  disk_size_gb: 10  # Asigna 10 GB de almacenamiento en disco
